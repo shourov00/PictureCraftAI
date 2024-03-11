@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 
 // ====== USER PARAMS
+import { IImage } from "@/lib/database/models/image.model";
+
 declare type CreateUserParams = {
   clerkId: string;
   email: string;
