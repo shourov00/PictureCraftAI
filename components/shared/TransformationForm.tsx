@@ -81,18 +81,18 @@ const TransformationForm = ({
       const transformationURL = getCldImageUrl({
         width: image?.width,
         height: image?.height,
-        src: image?.publicId,
+        src: image?.publicId || '',
         ...transformationConfig
       })
 
       const imageData = {
         title: values.title,
-        publicId: image?.publicId,
+        publicId: image?.publicId || '',
         transformationType: type,
-        width: image?.width,
-        height: image?.height,
+        width: image?.width || 0,
+        height: image?.height || 0,
         config: transformationConfig,
-        secureURL: image?.secureURL,
+        secureURL: image?.secureURL || '',
         transformationURL,
         aspectRatio: values.aspectRatio,
         prompt: values.prompt,
